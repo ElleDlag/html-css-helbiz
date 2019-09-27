@@ -1,4 +1,4 @@
-
+/* common class */
 .clearfix:after{
     content: "";
     display: table;
@@ -8,21 +8,22 @@ ul,li{
     list-style-type: none;
 }
 
-
+/* container only */
 .container{
     margin: auto;
     text-align: center;
-    border:1px solid red;
-    height: 500px;
+    border:1px solid red;  
 }
 .container>div{
     border:1px solid blue;
-    height:100%;
+
 }
 .container>div>.container{
     border:1px solid violet;
     height:100%;
 }
+
+/* navbar */
 #navbar{
     height:70px;
 }
@@ -37,34 +38,105 @@ ul,li{
 }
 #navbar ul>*{
     float:left;
-    width:calc(100% / 6);
-    
+    width:calc(100% / 6);   
 }
 
-/* #header.container{
-    padding:;
+
+
+/* header */
+.header-bkg{
+    height:550px;
+    background: rgb(172, 196, 233);
+    position:relative;
 }
-*/
+.header-title{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%)
+}
+
+
+
+/* overview */
 #overview.container{
-    padding:50px 120px;
+    padding:50px 5.6%;
+    height:100%
+}
+#overview.container .overview-bkg{
+    height:685px;
+    background: #fafafa
+}
+#overview.container>*:nth-child(1) .overview-bkg{
+    margin-right: 25px;
+}
+#overview.container>*:nth-child(2) .overview-bkg{
+    margin-left: 25px;
 }
 
-/*
-#how-section.container{
-    padding:50px;
+
+/* how-section */
+#how-section{
+    height:100%
 }
-*/
-#carousel.container{
-    padding:0 230px;
+#how-section .how-bkg{
+    height:600px;
+    background:rgb(161, 138, 241)
 }
+#how-section .how-carousel{
+    height:330px;
+    position: relative;
+}
+#how-section .how-carousel>.wrapper{
+    /* width:1720px; */
+    /* height:615px; */
+    position: absolute;
+    top:0%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border:3px solid red;
+    background: pink;
+    
+} 
+
+
+
+/* scoteer- and discovery */
 #scooter.container,
 #discovery.container{
-    padding:0 95px 30px;
+    padding:0 95px 0;
+    margin-bottom:30px
+}
+#scooter.container>div{
+    height:505px;
+    background: rgb(255, 232, 155)
+}
+#discovery .get-app{
+    margin-right: 20px;
+    height:440px;
+    background: rgb(255, 174, 108)
+}
+#discovery .find-us{
+    margin-left: 20px;
+    height:440px;
+    background: rgb(255, 174, 108)
 }
 
+/* socail-section */
 #social.container{
-    padding-bottom:30px;
+    margin-bottom:30px;
 }
+#social.container>div{
+    height:400px;
+    background:rgb(255, 122, 89)
+}
+
+
+
+/* footer */
 #footer.container{
     padding:110px 18.9%;
+}
+#footer.container{
+    background:#000 
 }
