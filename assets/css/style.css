@@ -4,12 +4,55 @@
 }
 body{
     position: relative;
+    font-family: "Open Sans", sans-serif
 }
 .clearfix:after{
     content: "";
     display: table;
     clear: both;
 }
+h1,h2{
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: -0.5px;
+}
+h2{
+    font-weight:700
+}
+h1{
+    font-size:50px;
+    color:white;
+    font-weight: 800
+}
+h2.scroll-title{
+    font-size:3.6rem
+}
+h2.section-title{
+    font-size:4.8rem
+}
+h2.social-title{
+    font-size:3.2rem;
+}
+h3.scroll-subtitle{
+    font-size: 1.8rem;
+}
+h3.footer-tile{
+    font-family:"Lato", sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+p.prgrph-title{
+    font-size:1.5rem;
+    color: white;
+}
+p.prgrph-scroll{
+    font-size:1.6rem;
+}
+p.prgrph-section{
+    font-size:2.1rem;
+    font-weight:300
+}
+
+
 ul,li{
     list-style-type: none;
 }
@@ -18,14 +61,22 @@ a{
     text-decoration: none;
     color:black
 }
+.wrapper-section{
+    max-width:1410px;
+    height:100%;
+    margin:40px auto;
+    border:3px solid red
+}
+.center-abs{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
 
 /* debug */
-.grid{
-    padding:16px;
-    height:100%
-}
-.grid .col-1{
-    height:100px
+.container>div{
+    border:1px solid blue;
 }
 
 
@@ -35,11 +86,6 @@ a{
     text-align: center;
     border:1px solid red;  
 }
-.container>div{
-    border:1px solid blue;
-
-}
-
 
 
 
@@ -92,12 +138,8 @@ a{
     line-height: 3.3rem;
     padding:0 5px;
     color:white;
-    font-size:1rem
-}
-@media screen and (max-width: 992px){
-    #navbar .nav-menu{
-        display:none
-    }
+    font-size:1rem;
+    display: initial;
 }
 
 
@@ -113,19 +155,19 @@ a{
     background-position: 50% 25%;
     position:relative;
 }
+
 .header-title{
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%)
 }
-
-
-.wrapper-section{
-    max-width:1410px;
-    height:100%;
-    margin:40px auto;
+.header-title a{
+    display: initial
 }
+
+
+
 
 /* overview */
 #overview .container{
@@ -184,33 +226,67 @@ a{
 
 
 
-/* scoteer- and discovery */
+/* scooter and discovery */
+#scooter, #discovery{padding:0 15px;}
 
-#scooter .container{
-    background: rgb(255, 232, 155)
+#scooter .scooter-bkg{
+    height:500px;
+    background:#252425 no-repeat url("../img/Helbiz-scooter.png");
+    background-size: 75%;
 }
-#scooter .container>*{
-    height:505px;
+#scooter .container{
+    position: relative;
+    height: 100%;
+    color:white;
+    border:3px solid blue
+}
+#scooter .container>.col-6{
+    position: absolute;
+    border:1px solid yellowgreen;
+    right:0;
+    top:50%;
+    transform: translateY(-50%)
 }
 #discovery .get-app{
     margin-right: 20px;
-    height:440px;
-    background: rgb(255, 174, 108)
+    height:600px;
+    background: no-repeat url("../img/HelbiZAPP.png"), linear-gradient(#41566a,#252f38) 50% no-repeat;;
+    background-size: 530px, 100%;
+    background-position: 50% 100%;
+    color:white;
 }
 #discovery .find-us{
     margin-left: 20px;
-    height:440px;
-    background: rgb(255, 174, 108)
+    height:600px;
+    background: #ffae6c no-repeat url("../img/Cities-1500.jpg");
+    background-size: cover;
+    color:white
+}
+#discovery .get-app a,
+#discovery .find-us a{
+    color:white
 }
 
+
+
 /* socail-section */
-#social.container{
+#social .container{
+    position: relative;
     margin-bottom:30px;
+    background: #fff url("../img/Social-Banner.jpg");
+    background-size:cover;
+    background-position: 50% 0%;
+    height:420px;
 }
-#social.container>div{
-    height:400px;
-    background:rgb(255, 122, 89)
+#social .container>.col-12{
+    height:200px;
+    width:450px; 
+    background:#fff;
 }
+#social .container>.col-12 ul li{
+    display: inline-block
+}
+
 
 
 
@@ -224,16 +300,35 @@ a{
     color:white
 }
 #footer .wrapper{
+    padding:100px 0;
     height:100%;
     border:1px solid red
 }
 footer .container{
-    padding: 50px
+    padding:0 15px;
+    border-bottom: 1px solid #fff;
+    
+}
+footer .container.listmap{
+    padding-bottom: 96px;
+}
+footer .container.policy,
+footer .container.appbtn{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+footer .container.appbtn a{
+    display: initial
 }
 
 
 /* ---- MEDIA QUERY */
-
+@media screen and (max-width: 1200px){
+    #scooter .scooter-bkg{
+        height:400px;
+        background-size: 800px;
+    }
+}
 @media screen and (min-width: 992px) and (max-width: 1200px){
     #navbar .wrapper,
     #footer .wrapper{
@@ -242,8 +337,23 @@ footer .container{
     #navbar .nav-menu.mr-lg{
         margin-left:calc(((100% / 12) * 6) - 107px )
     }
+    #discovery .get-app,
+    #discovery .find-us{
+        height:450px;
+    }
 }
-
+@media screen and (max-width: 992px){
+    #navbar .nav-menu{
+        display:none
+    }
+    #discovery .get-app,
+    #discovery .find-us{
+        height:400px;
+    }
+    #discovery .container .get-app{
+        background-size: 300px, 100%;
+    }
+}
 @media screen and (min-width: 767px) and (max-width: 992px){
     #navbar .wrapper,
     #footer .wrapper{
@@ -256,13 +366,6 @@ footer .container{
         max-height:20px;
     }
 }
-@media screen and (min-width: 576px) and (max-width: 767px){
-    #navbar .wrapper,
-    #footer .wrapper{
-        max-width:540px
-    }
-}
-
 @media screen and (max-width: 767px){
 
     #overview .wrapper-section{
@@ -272,15 +375,35 @@ footer .container{
         padding:0
     }
     #overview .container>*:nth-child(1) .overview-bkg{
-        margin-right:0
+        margin-right:0;
+        margin-bottom:30px;
     }
 
-    #scooter .wrapper-section,
-    #discovery .wrapper-section{
-        width:100%;
-        padding:0 15px
+    #scooter .scooter-bkg{
+        background-position: 45% 0%;
     }
     #discovery .container>*>*{
-        margin:0
+        margin:0;
+    }
+    #discovery .container .get-app{
+        margin-bottom: 20px;
+    }
+   
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    #navbar .wrapper,
+    #footer .wrapper{
+        max-width:540px
+    }
+    #footer .col-xs-12{
+        width:calc((100% /12)*3)
+    }
+}
+@media screen and (max-width: 576px){
+    #footer .wrapper{
+        padding:50px 0;
+    }
+    #footer .container:not(.appbtn){
+        text-align: left
     }
 }
