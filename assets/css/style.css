@@ -1,4 +1,10 @@
 /* common class */
+*{
+    font-size:10px
+}
+body{
+    position: relative;
+}
 .clearfix:after{
     content: "";
     display: table;
@@ -7,6 +13,21 @@
 ul,li{
     list-style-type: none;
 }
+a{
+    display: block;
+    text-decoration: none;
+    color:black
+}
+
+/* debug */
+.grid{
+    padding:16px;
+    height:100%
+}
+.grid .col-1{
+    height:100px
+}
+
 
 /* container only */
 .container{
@@ -18,35 +39,78 @@ ul,li{
     border:1px solid blue;
 
 }
-.container>div>.container{
-    border:1px solid violet;
-    height:100%;
-}
+
+
+
 
 /* navbar */
 #navbar{
     height:70px;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index:2;
+    width:100%;
+    background:#fff
 }
-#navbar.container{
+#navbar{
     padding:16px;
 }
+#navbar .wrapper,
+#footer .wrapper{
+    max-width:1140px;
+    margin:0 auto;
+    text-align: center;
+    border:1px solid black
+}
+#navbar .nav-logo,
+#navbar .nav-menu{
+    float:left;
+}
 #navbar ul>*,
-#navbar .logo{
-    line-height: 32px;
+#navbar .nav-logo{
+    line-height: 3rem;
     background:rgb(138, 0, 133);
-    color:white
+}
+
+#navbar .nav-logo{
+    width:80px;
+}
+#navbar .nav-logo a{
+    color:white;
+    font-size: 2rem;
+}
+
+#navbar .nav-menu.mr-lg{
+    margin-left:calc(((100% / 12) * 7) - 105px )
 }
 #navbar ul>*{
     float:left;
-    width:calc(100% / 6);   
+    margin-right:24px;
+}
+#navbar ul li a{
+    line-height: 3.3rem;
+    padding:0 5px;
+    color:white;
+    font-size:1rem
+}
+@media screen and (max-width: 992px){
+    #navbar .nav-menu{
+        display:none
+    }
 }
 
 
 
 /* header */
+#header{
+    margin-top:70px;
+}
 .header-bkg{
     height:550px;
-    background: rgb(172, 196, 233);
+    background: #000 no-repeat url("../img/HelbizOrig.jpg");
+    background-size: cover;
+    background-position: 50% 25%;
     position:relative;
 }
 .header-title{
@@ -57,35 +121,54 @@ ul,li{
 }
 
 
+.wrapper-section{
+    max-width:1410px;
+    height:100%;
+    margin:40px auto;
+}
 
 /* overview */
-#overview.container{
-    padding:50px 5.6%;
-    height:100%
+#overview .container{
+    height:100%;
+    padding:48px 15px;
 }
-#overview.container .overview-bkg{
-    height:685px;
+#overview .container .overview-bkg{
+    padding:50px 0;
+    height:548px;
     background: #fafafa
 }
-#overview.container>*:nth-child(1) .overview-bkg{
-    margin-right: 25px;
+#overview .container>*:nth-child(1) .overview-bkg{
+    margin-right: 40px;
 }
-#overview.container>*:nth-child(2) .overview-bkg{
-    margin-left: 25px;
+#overview .img-title{
+    max-height:22px;
+    margin:15px 0
+}
+#overview .img-product{
+    max-height:362px;
+    margin:20px 0
+}
+@media screen and (max-width: 992px){
+    #overview .img-product{
+        max-height:307px;
+    }
 }
 
 
-/* how-section */
+/* how-section and carousel */
 #how-section{
     height:100%
 }
 #how-section .how-bkg{
-    height:600px;
-    background:rgb(161, 138, 241)
+    height:500px;
+    background:#000 no-repeat url("../img/HelbizBanner.jpg");
+    background-size: cover;
+
 }
 #how-section .how-carousel{
     height:330px;
     position: relative;
+    border:1px solid black
 }
 #how-section .how-carousel>.wrapper{
     /* width:1720px; */
@@ -102,14 +185,12 @@ ul,li{
 
 
 /* scoteer- and discovery */
-#scooter.container,
-#discovery.container{
-    padding:0 95px 0;
-    margin-bottom:30px
-}
-#scooter.container>div{
-    height:505px;
+
+#scooter .container{
     background: rgb(255, 232, 155)
+}
+#scooter .container>*{
+    height:505px;
 }
 #discovery .get-app{
     margin-right: 20px;
@@ -134,9 +215,72 @@ ul,li{
 
 
 /* footer */
-#footer.container{
-    padding:110px 18.9%;
+
+#footer{
+    background:#000;
+    color:white
 }
-#footer.container{
-    background:#000 
+#footer a{
+    color:white
+}
+#footer .wrapper{
+    height:100%;
+    border:1px solid red
+}
+footer .container{
+    padding: 50px
+}
+
+
+/* ---- MEDIA QUERY */
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    #navbar .wrapper,
+    #footer .wrapper{
+        max-width: 950px;
+    }
+    #navbar .nav-menu.mr-lg{
+        margin-left:calc(((100% / 12) * 6) - 107px )
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px){
+    #navbar .wrapper,
+    #footer .wrapper{
+        max-width:720px
+    }
+    .wrapper-section{
+        max-width: 740px;
+    }
+    #overview .img-title{
+        max-height:20px;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px){
+    #navbar .wrapper,
+    #footer .wrapper{
+        max-width:540px
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    #overview .wrapper-section{
+        width:100%;
+    }
+    #overview .container{
+        padding:0
+    }
+    #overview .container>*:nth-child(1) .overview-bkg{
+        margin-right:0
+    }
+
+    #scooter .wrapper-section,
+    #discovery .wrapper-section{
+        width:100%;
+        padding:0 15px
+    }
+    #discovery .container>*>*{
+        margin:0
+    }
 }
