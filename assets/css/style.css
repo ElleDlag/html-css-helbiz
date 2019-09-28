@@ -59,8 +59,23 @@ ul,li{
 a{
     display: block;
     text-decoration: none;
-    color:black
+    color:black;
+    letter-spacing: .5px;
 }
+a.link-section{
+    font-size:2.1rem;
+}
+a.link-section:hover{
+    text-decoration: underline
+}
+a.link-btn:first-child{
+    margin-right:8px
+}
+a.link-btn:nth-child(2){
+    margin-left:8px
+}
+
+
 .wrapper-section{
     max-width:1410px;
     height:100%;
@@ -116,30 +131,30 @@ a{
 #navbar ul>*,
 #navbar .nav-logo{
     line-height: 3rem;
-    background:rgb(138, 0, 133);
 }
 
 #navbar .nav-logo{
     width:80px;
 }
 #navbar .nav-logo a{
-    color:white;
     font-size: 2rem;
 }
 
 #navbar .nav-menu.mr-lg{
-    margin-left:calc(((100% / 12) * 7) - 105px )
+    margin-left:calc(((100% / 12) * 7) - 117px )
 }
 #navbar ul>*{
     float:left;
     margin-right:24px;
 }
 #navbar ul li a{
-    line-height: 3.3rem;
+    line-height: 3rem;
     padding:0 5px;
-    color:white;
     font-size:1rem;
     display: initial;
+}
+#navbar .nav-lang>*:not(:last-child){
+    border-right:1px solid black
 }
 
 
@@ -185,6 +200,9 @@ a{
 #overview .img-title{
     max-height:22px;
     margin:15px 0
+}
+#overview a{
+    color:#0070C8;
 }
 #overview .img-product{
     max-height:362px;
@@ -262,9 +280,11 @@ a{
     background-size: cover;
     color:white
 }
+#scooter a,
 #discovery .get-app a,
 #discovery .find-us a{
-    color:white
+    color:white;
+    display: initial;
 }
 
 
@@ -293,10 +313,8 @@ a{
 /* footer */
 
 #footer{
+    font-family: "Lato";
     background:#000;
-    color:white
-}
-#footer a{
     color:white
 }
 #footer .wrapper{
@@ -307,15 +325,27 @@ a{
 footer .container{
     padding:0 15px;
     border-bottom: 1px solid #fff;
-    
+    text-align: left;
 }
 footer .container.listmap{
     padding-bottom: 96px;
+}
+footer .container.listmap a{
+    font-size:1.52rem;
+    font-weight:300;
+    color:#696969
 }
 footer .container.policy,
 footer .container.appbtn{
     padding-top: 32px;
     padding-bottom: 32px;
+}
+footer .container.policy a{
+    font-size:1.36rem;
+    color:white;
+}
+footer .container.appbtn{
+    text-align: center;
 }
 footer .container.appbtn a{
     display: initial
@@ -335,7 +365,7 @@ footer .container.appbtn a{
         max-width: 950px;
     }
     #navbar .nav-menu.mr-lg{
-        margin-left:calc(((100% / 12) * 6) - 107px )
+        margin-left:calc(((100% / 12) * 6) - 119px )
     }
     #discovery .get-app,
     #discovery .find-us{
