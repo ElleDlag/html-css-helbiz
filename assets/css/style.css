@@ -21,7 +21,8 @@ h2{
 h1{
     font-size:50px;
     color:white;
-    font-weight: 800
+    font-weight: 800;
+    margin-bottom: 8px;
 }
 h2.scroll-title{
     font-size:3.6rem
@@ -35,7 +36,7 @@ h2.social-title{
 h3.scroll-subtitle{
     font-size: 1.8rem;
 }
-h3.footer-tile{
+h3.footer-title{
     font-family:"Lato", sans-serif;
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -43,16 +44,16 @@ h3.footer-tile{
 p.prgrph-title{
     font-size:1.5rem;
     color: white;
+    margin-bottom:16px;
 }
 p.prgrph-scroll{
     font-size:1.6rem;
 }
 p.prgrph-section{
     font-size:2.1rem;
-    font-weight:300
+    font-weight:300;
+    margin:15px 0
 }
-
-
 ul,li{
     list-style-type: none;
 }
@@ -64,6 +65,14 @@ a{
 }
 a.link-section{
     font-size:2.1rem;
+}
+a.link-section:after{
+    content: "\2303";
+    display: inline-block;
+    transform: rotate(90deg);
+    margin-right:10px;
+    font-size:2.5rem;
+    vertical-align: middle;
 }
 a.link-section:hover{
     text-decoration: underline
@@ -80,7 +89,6 @@ a.link-btn:nth-child(2){
     max-width:1410px;
     height:100%;
     margin:40px auto;
-    border:3px solid red
 }
 .center-abs{
     position: absolute;
@@ -90,16 +98,15 @@ a.link-btn:nth-child(2){
 }
 
 /* debug */
-.container>div{
+/* .container>div{
     border:1px solid blue;
-}
+} */
 
 
 /* container only */
 .container{
     margin: auto;
-    text-align: center;
-    border:1px solid red;  
+    text-align: center; 
 }
 
 
@@ -122,7 +129,6 @@ a.link-btn:nth-child(2){
     max-width:1140px;
     margin:0 auto;
     text-align: center;
-    border:1px solid black
 }
 #navbar .nav-logo,
 #navbar .nav-menu{
@@ -170,7 +176,6 @@ a.link-btn:nth-child(2){
     background-position: 50% 25%;
     position:relative;
 }
-
 .header-title{
     position: absolute;
     top:50%;
@@ -228,16 +233,12 @@ a.link-btn:nth-child(2){
 #how-section .how-carousel{
     height:330px;
     position: relative;
-    border:1px solid black
 }
 #how-section .how-carousel>.wrapper{
-    /* width:1720px; */
-    /* height:615px; */
     position: absolute;
     top:0%;
     left:50%;
     transform:translate(-50%,-50%);
-    border:3px solid red;
     background: pink;
     
 } 
@@ -272,13 +273,15 @@ a.link-btn:nth-child(2){
     background-size: 530px, 100%;
     background-position: 50% 100%;
     color:white;
+    padding:48px 0
 }
 #discovery .find-us{
     margin-left: 20px;
     height:600px;
     background: #ffae6c no-repeat url("../img/Cities-1500.jpg");
     background-size: cover;
-    color:white
+    color:white;
+    padding:48px 0
 }
 #scooter a,
 #discovery .get-app a,
@@ -320,15 +323,23 @@ a.link-btn:nth-child(2){
 #footer .wrapper{
     padding:100px 0;
     height:100%;
-    border:1px solid red
 }
 footer .container{
     padding:0 15px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-align: left;
 }
 footer .container.listmap{
     padding-bottom: 96px;
+}
+footer .container.listmap>*{
+    height:225px
+}
+footer a{
+    padding:3.8px 20px
+}
+footer h3{
+    padding:0 16px 20px
 }
 footer .container.listmap a{
     font-size:1.52rem;
