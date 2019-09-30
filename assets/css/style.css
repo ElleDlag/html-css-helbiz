@@ -96,6 +96,30 @@ a.link-btn:nth-child(2){
     left:50%;
     transform: translate(-50%, -50%);
 }
+.center-left-abs{
+    position: absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+}
+.center-right-abs{
+    position: absolute;
+    top:50%;
+    right:0;
+    transform: translateY(-50%)
+}
+.wrapper-iphone,
+.testcont{
+    border:1px solid blue;
+    height:100%
+}
+.iphone-title{
+    height: 100%;
+    position:relative
+}
+
+
+
 
 
 /* container only */
@@ -230,13 +254,39 @@ a.link-btn:nth-child(2){
     position: relative;
 }
 #how-section .how-carousel>.wrapper{
+    width:100%;
     position: absolute;
     top:0%;
     left:50%;
     transform:translate(-50%,-50%);
-    background: pink;
+
     
-} 
+}
+#how-section .how-carousel>.wrapper{
+    border:3px solid red;
+    background: rgba(255, 192, 203, 0.468);
+    height:630px;
+}
+#how-section .how-carousel>.wrapper>*{
+    border:3px solid blue;
+    height:100%
+}
+
+#how-section .how-carousel>.wrapper>*>*{
+    border:3px solid green;
+    height:100%
+
+}
+#how-section .how-carousel .iphone-mockup,
+#how-section .how-carousel .iphone-title,
+#how-section .how-carousel .iphone-description{
+    position: relative
+}
+#how-section .how-carousel img{
+    /* max-height:630px; */
+    max-height: 100%;
+    border:1px solid yellow
+}
 
 
 
@@ -354,6 +404,11 @@ footer .container.appbtn{
 footer .container.appbtn a{
     display: initial
 }
+footer a img{
+    max-height:34px;
+    border:1px solid rgba(255, 255, 255, 0.351);
+    border-radius:5px;
+}
 
 
 /* ---- MEDIA QUERY */
@@ -401,7 +456,47 @@ footer .container.appbtn a{
     }
 }
 @media screen and (max-width: 767px){
+    h1{
+        font-size:3rem;
+    }
+    h2.scroll-title{
+        font-size:3rem
+    }
+    h2.section-title{
+        font-size:3.2rem
+    }
+    h3.scroll-subtitle{
+        font-size: 2.4rem;
+    }
+    h3.footer-title{
+        font-family:"Lato", sans-serif;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+    }
+    p.prgrph-title{
+        font-size:1.5rem;
+        color: white;
+        margin-bottom:16px;
+    }
+    p.prgrph-scroll{
+        font-size:1.8rem;
+    }
+    p.prgrph-section{
+        font-size:2rem;
+    }
+    a.link-section{
+        font-size:1.8rem;
+    }
+    
 
+
+
+
+
+
+    #header a img{
+        max-height:51px
+    }
     #overview .wrapper-section{
         width:100%;
     }
@@ -412,7 +507,9 @@ footer .container.appbtn a{
         margin-right:0;
         margin-bottom:30px;
     }
-
+    #overview .img-title{
+        max-height:18px;
+    }
     #scooter .scooter-bkg{
         background-position: 45% 0%;
     }
@@ -422,6 +519,7 @@ footer .container.appbtn a{
     #discovery .container .get-app{
         margin-bottom: 20px;
     }
+    
    
 }
 @media screen and (min-width: 576px) and (max-width: 767px){
