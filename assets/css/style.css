@@ -97,11 +97,6 @@ a.link-btn:nth-child(2){
     transform: translate(-50%, -50%);
 }
 
-/* debug */
-/* .container>div{
-    border:1px solid blue;
-} */
-
 
 /* container only */
 .container{
@@ -257,11 +252,9 @@ a.link-btn:nth-child(2){
     position: relative;
     height: 100%;
     color:white;
-    border:3px solid blue
 }
 #scooter .container>.col-6{
     position: absolute;
-    border:1px solid yellowgreen;
     right:0;
     top:50%;
     transform: translateY(-50%)
