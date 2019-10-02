@@ -108,17 +108,12 @@ a.link-btn:nth-child(2){
     right:0;
     transform: translateY(-50%)
 }
-.wrapper-iphone,
-.testcont{
-    border:1px solid blue;
-    height:100%
+.center-btm-abs{
+    position: absolute;
+    left:50%;
+    bottom:0;
+    transform: translateX(-50%);
 }
-.iphone-title{
-    height: 100%;
-    position:relative
-}
-
-
 
 
 
@@ -274,13 +269,15 @@ a.link-btn:nth-child(2){
 
 #how-section .how-carousel>.wrapper>*>*{
     border:3px solid green;
-    height:100%
-
-}
-#how-section .how-carousel .iphone-mockup,
-#how-section .how-carousel .iphone-title,
-#how-section .how-carousel .iphone-description{
+    height:100%;
     position: relative
+}
+
+#how-section .how-carousel .iphone-title h2,
+#how-section .how-carousel .iphone-description>*
+{
+    text-align: left;
+    width:50%;
 }
 #how-section .how-carousel img{
     /* max-height:630px; */
@@ -352,7 +349,6 @@ a.link-btn:nth-child(2){
 #social .container>.col-12 ul li{
     display: inline-block
 }
-
 
 
 
@@ -442,6 +438,16 @@ footer a img{
     #discovery .container .get-app{
         background-size: 300px, 100%;
     }
+   
+    #how-section .how-carousel .col-4{
+        width:calc((100% / 12) * 12)
+    }
+    #how-section .how-carousel .iphone-title{
+        height: auto;
+    }
+    #how-section .how-carousel .iphone-title h2{
+        width:100%
+    }
 }
 @media screen and (min-width: 767px) and (max-width: 992px){
     #navbar .wrapper,
@@ -510,6 +516,9 @@ footer a img{
     #overview .img-title{
         max-height:18px;
     }
+    #how-section .how-carousel>.wrapper{
+        height:510px
+    }
     #scooter .scooter-bkg{
         background-position: 45% 0%;
     }
@@ -519,6 +528,7 @@ footer a img{
     #discovery .container .get-app{
         margin-bottom: 20px;
     }
+
     
    
 }
